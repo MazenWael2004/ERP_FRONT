@@ -1,0 +1,23 @@
+{
+    "hello": "مرحبا",
+    "LOGIN": "تسجيل الدخول",
+    "username": "اسم المستخدم",
+    "home": "الصفحة الرئيسية",
+    "users": "المستخدمون",
+    "settings": "الإعدادات",
+    "navbar.activity":"اببااسبب",
+    "USER_NAME":"مازن وائل حسين",
+    "USER_ROLE":"مدير النظام",
+    "WEBSITE_NAME":"نظام لادارة الأعمال داخل بيكونكت",
+    "WEBSITE_DESCRIPTION":"منصة مركزية تُستخدم لأتمتة عمليات الشركة",
+    "WEBSITE_FEATURE_ONE":"إدارة المستخدمين والموظفين",
+    "WEBSITE_FEATURE_TWO":"تحليل المبيعات وتقارير معمقة",
+    "WEBSITE_FEATURE_THREE":"واجهة سهلة الاستخدام",
+    "WELCOME_MESSAGE":"! مرحبًا بعودتك",
+    "SIGN_IN_MESSAGE":"برجاء تسجيل الدخول",
+    "USERNAME":"اسم المستخدم",
+    "PASSWORD":"كلمة المرور",
+    "ENTER_USERNAME":"أدخل اسم المستخدم الخاص بك",
+    "ENTER_PASSWORD":"أدخل كلمة المرور الخاصة بك",
+    "REMEMBER":"تذكرنى"
+}

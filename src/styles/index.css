@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Cairo", sans-serif;
+    background: var(--mantine-color-body);
+}
+
+p,h1,h2,li,label{
+    font-family: "Cairo", sans-serif;
+}
+.form-group input {
+    color: #333;              /* Text color */
+    font-size: 16px;          /* Text size */
+    font-family: "Cairo", sans-serif;
+    font-weight: 500;         /* Text thickness */
+    letter-spacing: 0.5px;    /* Space between letters */
+    text-align: right;         /* Or right for Arabic */
+}
+
+.launcher-header-container{
+    padding: 25px;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: #8c8b8b solid 4px;
+}
+
+.ltr-header {
+    justify-content: space-between;
+}
+
+.rtl-header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+
+}
+.header-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-picture{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name{
+    font-weight: 700;
+}
+
+.profile-role{
+    font-size: 14px;
+    color:#5b5858
+}
+
+.header-notification img,
+.header-log-out img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.header-notification img:hover,
+.header-log-out img:hover {
+    transform: scale(1.1);
+}
+
+.launcher-content-outer-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Horizontal */
+    align-items: center;     /* Vertical */
+}
+
+.launcher-content-inner-container {
+    width: 500px;
+    height: 550px;
+     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    justify-content: center; /* Centers the columns */
+    align-items: center;
+    gap: 20px;
+
+}
+
+.app-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    gap: 10px;
+}
+
+.app-item:hover{
+    transform: scale(1.1);
+}
+
+.icon1{
+    background-color: #146283;
+}
+
+.icon2{
+    background-color: #148353;
+}
+
+.icon3{
+    background-color: #601483;
+}
+
+.icon4{
+    background-color: #836D14;
+}
+
+.icon5{
+    background-color: #6F8314;
+}
+
+
+
+
+
+
+.app-item-icon{
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-icon{
+    width: 65px;
+    height: 65px;
+}
+
+.app-item-name{
+    font-weight: 700;
+}
+
+.login-container{
+    display: flex;
+    height: 100vh;
+}
+
+.first-half-container,.second-half-container{
+    flex: 1;
+}
+.website-name{
+    font-size:40px;
+    color: white;
+}
+.first-half-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../assets/erp-photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first-half-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35); /* Adjust darkness */
+}
+
+.first-half-container > * {
+    position: relative;
+    z-index: 1;
+}
+.second-half-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.login-form-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.login-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.login-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.password-input-container {
+    position: relative;
+}
+
+.password-input-container input {
+    width: 100%;
+    padding: 12px 42px 12px 16px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-group input {
+    padding: 12px 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: .2s;
+}
+
+.form-group input:focus {
+    border-color: #148353;
+    box-shadow: 0 0 0 3px rgba(20,131,83,.15);
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.remember-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #555;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #148353;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Cairo", sans-serif;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.login-button:hover {
+    background: #106c44;
+}

@@ -1,0 +1,17 @@
+{
+    "LOGIN":"Sign In",
+    "USER_NAME":"Mazen Wael Hussien",
+    "USER_ROLE":"System Administrator",
+    "WEBSITE_NAME":"ERP System for B-Connect",
+    "WEBSITE_DESCRIPTION":"A Centralized Platform used for automating corporate processes",
+    "WEBSITE_FEATURE_ONE":"Users and Employees Management",
+    "WEBSITE_FEATURE_TWO":"Sales Analysis and Insightful Reports",
+    "WEBSITE_FEATURE_THREE":"User-Friendly Interface",
+    "WELCOME_MESSAGE":"Welcome back!",
+    "SIGN_IN_MESSAGE":"Sign in to continue to the ERP System",
+    "USERNAME":"Username",
+    "PASSWORD":"Password",
+    "ENTER_USERNAME":"Enter your username",
+    "ENTER_PASSWORD":"Enter your password",
+    "REMEMBER":"Remember me"
+}
