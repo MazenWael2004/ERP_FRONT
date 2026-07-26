@@ -13,5 +13,11 @@
     "PASSWORD":"Password",
     "ENTER_USERNAME":"Enter your username",
     "ENTER_PASSWORD":"Enter your password",
-    "REMEMBER":"Remember me"
+    "REMEMBER":"Remember me",
+    "USERNAME_REQUIRED":"Username is required",
+    "PASSWORD_REQUIRED":"Password is required",
+    "INVALID_CREDENTIALS":"Invalid username or password",
+    "LOGIN_SUCCESSFUL":"Login Successful",
+    "USERS_TITLE":"Users",
+    "EMPLOYEES_TITLE":"Employees"
 }

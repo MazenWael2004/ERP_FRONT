@@ -8,12 +8,14 @@ import "@mantine/core/styles.css";
 import i18n from "../config/i18n.ts";
 import { Toaster } from "react-hot-toast";
 import {useState} from 'react';
+import AuthProvider from "../features/auth/context/AuthProvider.tsx";
 
 
 
 const isRTL = i18n.language === "ar";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
+  <AuthProvider>
   <MantineProvider
     defaultColorScheme="light"
   >
@@ -25,4 +27,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     />
     </DirectionProvider>
   </MantineProvider>
+  </AuthProvider>
 );

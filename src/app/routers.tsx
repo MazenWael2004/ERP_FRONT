@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import LauncherPage from "../features/launcher/pages/LauncherPage";
 import LoginPage from "../features/auth/pages/LoginPage";
+import ViewJobs from "../features/jobs/pages/ViewJobs";
 
 
 export const router = createBrowserRouter([
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
     //     element: <LoginPage />,
     //   },
     // ],
+  },
+  {
+     path: "/jobs",
+    element: <ViewJobs />
   },
 
 //   {

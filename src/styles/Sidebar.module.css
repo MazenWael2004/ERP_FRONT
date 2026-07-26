@@ -1,0 +1,29 @@
+.sidebar {
+  background: var(--mantine-color-body);
+}
+
+.link {
+  border-radius: 8px;
+  margin-bottom: 4px;
+  transition: background-color 150ms;
+
+}
+
+.link:hover {
+  background: var(--mantine-color-gray-1);
+}
+
+.link[data-active] {
+  background: var(--mantine-color-blue-6);
+  color: white;
+}
+
+.link[data-active] svg {
+  color: white;
+}
+
+.linkLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}

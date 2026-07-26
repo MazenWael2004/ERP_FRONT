@@ -19,5 +19,11 @@
     "PASSWORD":"كلمة المرور",
     "ENTER_USERNAME":"أدخل اسم المستخدم الخاص بك",
     "ENTER_PASSWORD":"أدخل كلمة المرور الخاصة بك",
-    "REMEMBER":"تذكرنى"
+    "REMEMBER":"تذكرنى",
+    "USERNAME_REQUIRED":"اسم المستخدم مطلوب",
+    "PASSWORD_REQUIRED":"كلمة المرور مطلوبة",
+    "INVALID_CREDENTIALS":"اسم المستخدم أو كلمة المرور غير صحيحة",
+    "LOGIN_SUCCESSFUL":"تم التسجيل بنجاح",
+    "USERS_TITLE":"المستخدمين",
+    "EMPLOYEES_TITLE":"الموظفين"
 }

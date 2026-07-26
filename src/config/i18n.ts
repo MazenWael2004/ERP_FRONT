@@ -16,7 +16,7 @@ i18n
             }
         },
 
-        lng: "ar",
+        lng: "en",
 
         fallbackLng: "en",
 
