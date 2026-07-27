@@ -9,6 +9,7 @@ import i18n from "../config/i18n.ts";
 import { Toaster } from "react-hot-toast";
 import {useState} from 'react';
 import AuthProvider from "../features/auth/context/AuthProvider.tsx";
+import '../shared/api/interceptors.ts';
 
 
 

@@ -3,6 +3,28 @@ import Sidebar from "../shared/components/Sidebar";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import LanguageSwitcher from "../shared/components/LanguageSwitcher";
+import JobIcon from '../assets/jobs2.png';
+const sidebarLinks = [
+  {
+    label: "Jobs",
+    to: "/jobs",
+    icon:JobIcon
+  },
+  {
+    label: "Users",
+    children: [
+      { label: "Employees", to: "/users/employees" },
+      { label: "Roles", to: "/users/roles" },
+    ],
+  },
+  {
+    label: "Settings",
+    children: [
+      { label: "General", to: "/settings/general" },
+      { label: "Security", to: "/settings/security" },
+    ],
+  },
+];
 
 export function MainLayout({
   children,
@@ -27,7 +49,7 @@ export function MainLayout({
       padding="md"
     >
       <AppShell.Navbar>
-        <Sidebar />
+        <Sidebar links={sidebarLinks} />
         <LanguageSwitcher />
         
       </AppShell.Navbar>

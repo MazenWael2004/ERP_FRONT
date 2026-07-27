@@ -5,6 +5,9 @@ import profileIcon from "../../../assets/profile.png";
 import companyLogoIcon from "../../../assets/b_connect_egypt_logo-removebg-preview.png";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { useAuth } from "../../auth/hooks/useAuth";
+import { useDisclosure } from "@mantine/hooks";
+import AppModal from "../../../shared/components/Modal";
 
 interface LauncherHeaderProps {
   name: string;
@@ -14,6 +17,8 @@ interface LauncherHeaderProps {
 function LauncherHeader({name,role}:LauncherHeaderProps) {
   const { i18n, t } = useTranslation();
   const isArabic = i18n.language === "ar";
+  const {logout} = useAuth();
+  const [opened, { open, close }] = useDisclosure(false);
 
   return (
     <div
@@ -23,7 +28,14 @@ function LauncherHeader({name,role}:LauncherHeaderProps) {
     >
       <div className="header-content">
         <div className="header-log-out">
-          <img src={logOutIcon} style={{ width: 25, height: 25 }} alt="" />
+          <img src={logOutIcon} style={{ width: 25, height: 25 }} alt="" onClick={open} />
+          <AppModal
+        opened={opened}
+        onClose={close}
+        title="Add Job"
+      >
+        <p>Your form goes here.</p>
+      </AppModal>
         </div>
         <div className="header-notification">
           <img

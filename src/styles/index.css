@@ -381,3 +381,14 @@ span{
   outline: 2px solid #228be6;
   outline-offset: 2px;
 }
+
+.required {
+  color: red;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+[dir="rtl"] .required {
+  margin-left: 0;
+  margin-right: 4px;
+}

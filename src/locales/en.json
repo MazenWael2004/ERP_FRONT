@@ -19,5 +19,17 @@
     "INVALID_CREDENTIALS":"Invalid username or password",
     "LOGIN_SUCCESSFUL":"Login Successful",
     "USERS_TITLE":"Users",
-    "EMPLOYEES_TITLE":"Employees"
+    "EMPLOYEES_TITLE":"Employees",
+    "ADD_JOB":"Add a Job",
+    "JOB_TITLE_EN":"Job Title English",
+    "JOB_TITLE_AR":"Job Title Arabic",
+    "SAVE":"Save",
+    "ENTER_JOB_TITLE_EN":"Enter Job Title in English",
+    "ENTER_JOB_TITLE_AR":"Enter Job Title in Arabic",
+    "JOB_CODE":"Job Code",
+    "ENTER_JOB_CODE":"Enter Job code",
+    "JOB_TITLE_EN_REQUIRED":"Job Title En is Required",
+    "JOB_TITLE_AR_REQUIRED":"Job Title Ar is Required",
+    "JOB_CODE_REQUIRED":"Job code is required",
+    "JOB_CREATED_SUCCESSFULLY":"Job Created Successfully"
 }

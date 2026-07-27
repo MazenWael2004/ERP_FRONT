@@ -2,41 +2,31 @@ import { createBrowserRouter } from "react-router-dom";
 import LauncherPage from "../features/launcher/pages/LauncherPage";
 import LoginPage from "../features/auth/pages/LoginPage";
 import ViewJobs from "../features/jobs/pages/ViewJobs";
+import NewJob from "../features/jobs/pages/NewJob";
+import ProtectedRoute from "../shared/components/ProtectedRoute";
 
 
 export const router = createBrowserRouter([
   {
-    path: "/desk",
-    element: <LauncherPage />,
-    // errorElement: <NotFoundPage />,
-    // children: [
-    //   {
-    //     index: true,
-    //     element: <HomePage />,
-    //   },
-    //   {
-    //     path: "login",
-    //     element: <LoginPage />,
-    //   },
-    // ],
-  },
-  {
-     path: "/jobs",
-    element: <ViewJobs />
-  },
-
-//   {
-//     path: "/dashboard",
-//     element: <DashboardLayout />,
-//     children: [
-//       {
-//         index: true,
-//         element: <DashboardPage />,
-//       },
-//     ],
-//   },
-{
   path:"/login",
   element: <LoginPage />
-}
+},
+   {
+    element: <ProtectedRoute />,
+    children: [
+      {
+        path: "/jobs",
+        element: <ViewJobs />,
+      },
+      {
+        path: "/jobs/new-job",
+        element: <NewJob />,
+      },
+      {
+        path: "/desk",
+        element: <LauncherPage />,
+      },
+    ],
+  },
+
 ]);

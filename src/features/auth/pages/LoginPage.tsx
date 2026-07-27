@@ -15,6 +15,7 @@ import { useAuth } from "../hooks/useAuth";
 
 
 
+
 function LoginPage() {
   // for toggling translation/ language...
   const { i18n, t } = useTranslation();
@@ -23,6 +24,7 @@ function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const nav = useNavigate();
   const {login} = useAuth();
+  
 
 
   // We used react-hook-form to pass

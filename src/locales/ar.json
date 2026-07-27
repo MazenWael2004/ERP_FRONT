@@ -25,5 +25,17 @@
     "INVALID_CREDENTIALS":"اسم المستخدم أو كلمة المرور غير صحيحة",
     "LOGIN_SUCCESSFUL":"تم التسجيل بنجاح",
     "USERS_TITLE":"المستخدمين",
-    "EMPLOYEES_TITLE":"الموظفين"
+    "EMPLOYEES_TITLE":"الموظفين",
+    "ADD_JOB":"إضافة وظيفة",
+    "JOB_TITLE_EN":"اسم الوظيفة باللغة الأنجليزية",
+    "JOB_TITLE_AR":"اسم الوظيفة باللغة العربية",
+    "SAVE":"حفظ",
+    "ENTER_JOB_TITLE_EN":"أدخل اسم الوظيفة باللغة الإنجليزية",
+    "ENTER_JOB_TITLE_AR":"أدخل اسم الوظيفة باللغة العربية",
+    "JOB_CODE":"كود الوظيفة",
+    "ENTER_JOB_CODE":"أدخل كود الوظيفة",
+    "JOB_TITLE_EN_REQUIRED":"المسمى الوظيفي (باللغة الإنجليزية) مطلوب",
+    "JOB_TITLE_AR_REQUIRED":"المسمى الوظيفي (باللغة العربية) مطلوب",
+    "JOB_CODE_REQUIRED":"الكود الوظيفي مطلوب",
+    "JOB_CREATED_SUCCESSFULLY":"تم إنشاء الوظيفة بنجاح"
 }
