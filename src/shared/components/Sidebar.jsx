@@ -3,21 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import classes from "../../styles/Sidebar.module.css";
 import companyLogoIcon from "../../assets/b_connect_egypt_logo-removebg-preview.png";
 
-export interface SidebarItem {
-  label: string;
-  icon: string;
-  to?: string;
-  children?: {
-    label: string;
-    to: string;
-  }[];
-}
 
-interface SidebarProps {
-  links: SidebarItem[];
-}
 
-export default function Sidebar({ links }: SidebarProps) {
+
+export default function Sidebar({ links }) {
   const { pathname } = useLocation();
 
   return (
@@ -45,9 +34,9 @@ export default function Sidebar({ links }: SidebarProps) {
               classNames={{ label: classes.linkLabel }}
               component={Link}
               leftSection={
-                <img src={item.icon} alt={item.label} width={30} height={30} />
+                <img src={item.icon} alt={item.label} width={26} height={26} />
               }
-              to={item.to!}
+              to={item.to}
               label={item.label}
               active={pathname === item.to}
             />

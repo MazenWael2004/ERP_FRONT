@@ -6,7 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import type { LoginFormRequest } from "../types";
 import { loginSchema } from "../validation";
 import { loginApi } from "../authService";
 import axios from "axios";
@@ -33,11 +32,11 @@ function LoginPage() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormRequest>({
+  } = useForm({
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = async (data: LoginFormRequest) => {
+  const onSubmit = async (data) => {
     setIsLoading(true);
 
     try {
@@ -103,7 +102,7 @@ function LoginPage() {
                 style={{ textAlign: isArabic ? "right" : "left", marginTop: 5 }}
                 className="error-message"
               >
-                {t(errors.userName.message!)}
+                {t(errors.userName.message)}
               </span>
             )}
           </div>
@@ -146,7 +145,7 @@ function LoginPage() {
                 style={{ textAlign: isArabic ? "right" : "left", marginTop: 5 }}
                 className="error-message"
               >
-                {t(errors.password.message!)}
+                {t(errors.password.message)}
               </span>
             )}
           </div>

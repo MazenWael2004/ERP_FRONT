@@ -9,12 +9,9 @@ import { useAuth } from "../../auth/hooks/useAuth";
 import { useDisclosure } from "@mantine/hooks";
 import AppModal from "../../../shared/components/Modal";
 
-interface LauncherHeaderProps {
-  name: string;
-  role: string;
-}
 
-function LauncherHeader({name,role}:LauncherHeaderProps) {
+
+function LauncherHeader({name,role}) {
   const { i18n, t } = useTranslation();
   const isArabic = i18n.language === "ar";
   const {logout} = useAuth();
@@ -32,9 +29,27 @@ function LauncherHeader({name,role}:LauncherHeaderProps) {
           <AppModal
         opened={opened}
         onClose={close}
-        title="Add Job"
+        title="Logout"
       >
-        <p>Your form goes here.</p>
+       <div className="logout-container">
+  <p className="logout-text">Are you sure you want to logout?</p>
+
+  <div className="logout-actions">
+    <button
+      className="logout-btn cancel-btn"
+      onClick={close}
+    >
+      No
+    </button>
+
+    <button
+      className="logout-btn confirm-btn"
+      onClick={logout}
+    >
+      Yes
+    </button>
+  </div>
+</div>
       </AppModal>
         </div>
         <div className="header-notification">

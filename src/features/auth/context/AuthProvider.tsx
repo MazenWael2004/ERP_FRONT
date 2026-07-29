@@ -9,6 +9,7 @@ interface Props {
 
 export default function AuthProvider({ children }: Props) {
 
+
   const [user, setUser] = useState<loggedUser | null>(() => {
     const savedUser = localStorage.getItem("user");
 
@@ -29,13 +30,15 @@ export default function AuthProvider({ children }: Props) {
 
   const logout = () => {
 
-    setUser(null);
-
-    setToken(null);
-
+  
     localStorage.removeItem("user");
 
     localStorage.removeItem("access");
+    window.location.replace("/desk");
+      setUser(null);
+      setToken(null);
+
+    
   };
 
   return (

@@ -1,0 +1,34 @@
+import { api } from "../../../shared/api/axios";
+
+
+export const fetchZones = async ()=>{
+      const response = await api.get("/zones");
+      return response.data;
+};
+
+
+export const createZone = async(zoneData)=>{
+    const response = await api.post("/zones",zoneData);
+    return response.data;
+};
+
+
+export const getZoneById = async(id)=>{
+    const response = await api.get(`/zones/${id}`);
+    return response.data;
+};
+
+export const updateZone = async (id, data) => {
+  return api.patch(`/zones/${id}`, data);
+};
+
+export const checkZoneExists = async (field,value) => {
+  const response = await api.get("/zones/check", {
+    params: {
+      field,
+      value,
+    },
+  });
+
+  return response.data;
+};

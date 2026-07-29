@@ -17,32 +17,32 @@ import {
 } from "@mantine/core";
 import classes from "../../styles/Tablesort.module.css";
 
-export interface TableColumn<T> {
-  key: keyof T;
-  label: string;
-  sortable?: boolean;
-  searchable?: boolean;
-  render?: (value: T[keyof T], row: T) => React.ReactNode;
-}
+// export interface TableColumn<T> {
+//   key: keyof T;
+//   label: string;
+//   sortable?: boolean;
+//   searchable?: boolean;
+//   render?: (value: T[keyof T], row: T) => React.ReactNode;
+// }
 
-interface TableSortProps<T extends Record<string, any>> {
-  data: T[];
-  columns: TableColumn<T>[];
-  rowKey: keyof T | ((row: T) => React.Key);
-  searchPlaceholder?: string;
+// interface TableSortProps<T extends Record<string, any>> {
+//   data: T[];
+//   columns: TableColumn<T>[];
+//   rowKey: keyof T | ((row: T) => React.Key);
+//   searchPlaceholder?: string;
 
-  // NEW
-  selectable?: boolean;
-  onSelectionChange?: (selectedRows: T[]) => void;
-}
+//   // NEW
+//   selectable?: boolean;
+//   onSelectionChange?: (selectedRows: T[]) => void;
+// }
 
-interface ThProps {
-  children: React.ReactNode;
-  reversed: boolean;
-  sorted: boolean;
-  sortable?: boolean;
-  onSort: () => void;
-}
+// interface ThProps {
+//   children: React.ReactNode;
+//   reversed: boolean;
+//   sorted: boolean;
+//   sortable?: boolean;
+//   onSort: () => void;
+// }
 
 function Th({
   children,
@@ -50,7 +50,7 @@ function Th({
   sorted,
   sortable = true,
   onSort,
-}: ThProps) {
+}) {
   if (!sortable) {
     return (
       <Table.Th className={classes.th}>
@@ -84,16 +84,16 @@ function Th({
   );
 }
 
-export default function TableSort<T extends Record<string, any>>({
+export default function TableSort({
   data,
   columns,
   rowKey,
   searchPlaceholder = "Search...",
   selectable = false,
   onSelectionChange,
-}: TableSortProps<T>) {
+}) {
   const [search, setSearch] = useState("");
-  const [sortBy, setSortBy] = useState<keyof T | null>(null);
+  const [sortBy, setSortBy] = useState(null);
   const [reverseSortDirection, setReverseSortDirection] = useState(false);
 
   // NEW
@@ -101,10 +101,10 @@ export default function TableSort<T extends Record<string, any>>({
     new Set()
   );
 
-  const getRowKey = (row: T): React.Key => {
+  const getRowKey = (row)=> {
     return typeof rowKey === "function"
       ? rowKey(row)
-      : (row[rowKey] as React.Key);
+      : (row[rowKey]);
   };
 
   const filteredData = useMemo(() => {
@@ -136,7 +136,7 @@ export default function TableSort<T extends Record<string, any>>({
     });
   }, [filteredData, sortBy, reverseSortDirection]);
 
-  const setSorting = (field: keyof T) => {
+  const setSorting = (field) => {
     const reversed =
       field === sortBy ? !reverseSortDirection : false;
 
@@ -145,7 +145,7 @@ export default function TableSort<T extends Record<string, any>>({
   };
 
   // NEW
-  const toggleRow = (row: T) => {
+  const toggleRow = (row) => {
     const key = getRowKey(row);
     const next = new Set(selectedKeys);
 

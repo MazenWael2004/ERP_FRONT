@@ -4,43 +4,50 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import LanguageSwitcher from "../shared/components/LanguageSwitcher";
 import JobIcon from '../assets/jobs2.png';
-const sidebarLinks = [
-  {
-    label: "Jobs",
-    to: "/jobs",
-    icon:JobIcon
-  },
-  {
-    label: "Users",
-    children: [
-      { label: "Employees", to: "/users/employees" },
-      { label: "Roles", to: "/users/roles" },
-    ],
-  },
-  {
-    label: "Settings",
-    children: [
-      { label: "General", to: "/settings/general" },
-      { label: "Security", to: "/settings/security" },
-    ],
-  },
-];
+import locationIcon from '../assets/location.png';
+
+
 
 export function MainLayout({
   children,
   header,
-}: {
-  children: React.ReactNode;
-  header: React.ReactNode;
 }) {
-    const { i18n } = useTranslation();
-
-  const isArabic = i18n.language === "ar";
+  
+    const { i18n,t } = useTranslation();
+    const isArabic = i18n.language === "ar";
 
   useEffect(() => {
     document.documentElement.dir = isArabic ? "rtl" : "ltr";
     document.documentElement.lang = isArabic ? "ar" : "en";
   }, [isArabic]);
+
+  const sidebarLinks = [
+  {
+    label: t("JOBS"),
+    to: "/jobs",
+    icon:JobIcon
+  },
+  {
+    label: t("ZONES"),
+    to: "/zones",
+    icon:locationIcon
+  },
+  // {
+  //   label: "Users",
+  //   children: [
+  //     { label: "Employees", to: "/users/employees" },
+  //     { label: "Roles", to: "/users/roles" },
+  //   ],
+  // },
+  // {
+  //   label: "Settings",
+  //   children: [
+  //     { label: "General", to: "/settings/general" },
+  //     { label: "Security", to: "/settings/security" },
+  //   ],
+  // },
+];
+
 
   return (
     <AppShell
@@ -50,7 +57,9 @@ export function MainLayout({
     >
       <AppShell.Navbar>
         <Sidebar links={sidebarLinks} />
-        <LanguageSwitcher />
+        <div style={{ marginTop: "auto", padding: "1rem" }}>
+    <LanguageSwitcher />
+  </div>
         
       </AppShell.Navbar>
 

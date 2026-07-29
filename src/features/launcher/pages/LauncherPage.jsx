@@ -17,7 +17,7 @@ function LauncherPage() {
   console.log(user);
   return (
     <div>
-    <LauncherHeader name={isArabic?user!.name_ar:user!.name_en} role={'role'} />
+    <LauncherHeader name={isArabic?user?.name_ar:user?.name_en} role={'role'} /> {/*? means that it can be null */}
     <LauncherContent />
     </div>
   )

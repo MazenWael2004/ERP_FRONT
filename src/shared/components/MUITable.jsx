@@ -1,18 +1,17 @@
-import { DataGrid} from "@mui/x-data-grid";
-import type {GridColDef } from "@mui/x-data-grid";
+import {
+  DataGrid,
+} from "@mui/x-data-grid";
 import { Box } from "@mui/material";
 
-interface DataTableProps<T> {
-  rows: T[];
-  columns: GridColDef[];
-  loading?: boolean;
-}
 
-export default function DataTable<T extends { id: number | string }>({
+
+export default function DataTable({
   rows,
   columns,
   loading = false,
-}: DataTableProps<T>) {
+  onRowClick,
+  onRowSelectionModelChange,
+}) {
   return (
     <Box sx={{ height: 550, width: "100%" }}>
       <DataGrid
@@ -22,7 +21,11 @@ export default function DataTable<T extends { id: number | string }>({
         checkboxSelection
         disableRowSelectionOnClick
         pageSizeOptions={[5, 10, 25, 50]}
-        sx={{fontFamily:"Cairo"}}
+        onRowClick={(params) => onRowClick?.(params.row)}
+        onRowSelectionModelChange={(newSelectionModel) => {
+          onRowSelectionModelChange?.(newSelectionModel);
+        }}
+        sx={{ fontFamily: "Cairo" }}
         initialState={{
           pagination: {
             paginationModel: {

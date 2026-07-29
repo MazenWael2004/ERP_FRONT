@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { DirectionProvider, MantineProvider} from "@mantine/core";
-import { router } from "../app/routers.tsx";
+import { router } from "./routers.jsx";
 import "../styles/index.css";
 import { ColorSchemeScript } from "@mantine/core";
 import "@mantine/core/styles.css";
@@ -15,7 +15,7 @@ import '../shared/api/interceptors.ts';
 
 const isRTL = i18n.language === "ar";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <AuthProvider>
   <MantineProvider
     defaultColorScheme="light"
