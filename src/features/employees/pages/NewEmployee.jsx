@@ -3,13 +3,13 @@ import Header from "../../../shared/components/Header";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../../auth/hooks/useAuth";
 import toast from "react-hot-toast";
-import { createJob } from "../api/jobService";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import JobForm from "../../../shared/components/JobForm";
+import EmployeeForm from "../../../shared/components/EmployeeForm";
+import { createEmployee } from "../api/employeeService";
 
-function NewJob() {
+function NewEmployee() {
   const nav = useNavigate();
   const { t } = useTranslation();
   const { user } = useAuth();
@@ -21,17 +21,17 @@ function NewJob() {
     setIsLoading(true);
 
     try {
-      const result = await createJob(data);
+      const result = await createEmployee(data);
 
       console.log(result);
 
-      toast.success(t("JOB_CREATED_SUCCESSFULLY"));
+      toast.success(t("EMPLOYEE_CREATED_SUCCESSFULLY"));
 
-      nav("/jobs");
+      nav("/employees");
     } catch (error) {
       if (axios.isAxiosError(error)) {
         if (error.response?.status === 409) {
-          toast.error(t("JOB_ALREADY_EXISTS"));
+          toast.error(t("EMPLOYEE_ALREADY_EXISTS"));
           console.log(error.response?.data);
         } else {
           console.log(error.response?.data);
@@ -48,19 +48,16 @@ function NewJob() {
     <MainLayout
       header={
         <Header
-          route={t("NEW_JOB")}
+          route={t("NEW_EMPLOYEE")}
           buttonText={t("SAVE")}
           buttonType="submit"
           formId="new-job-form"
         />
       }
     >
-      <JobForm
-        formId="new-job-form"
-        onSubmit={handleSave}
-      />
+      <EmployeeForm formId="new-job-form" onSubmit={handleSave} />
     </MainLayout>
   );
 }
 
-export default NewJob;
+export default NewEmployee;

@@ -9,6 +9,7 @@ import { fetchZones } from "../api/zoneService";
 import ActionButton from "../../../shared/components/ActionButton";
 import AppModal from "../../../shared/components/Modal";
 import { useDisclosure } from "@mantine/hooks";
+import { deleteZone } from "../api/zoneService";
 
 const columns = [
   {
@@ -65,6 +66,18 @@ function ViewZones(){
     loadZones();
   }, []);
 
+  const handleDelete = async () => {
+      try {
+        await Promise.all(selectedRows.map((zone) => deleteZone(zone.id)));
+  
+        setSelectedRows([]);
+  
+        await loadZones();
+      } catch (error) {
+        console.error("Failed to delete zones:", error);
+      }
+    };
+
    return (
     <MainLayout
       header={
@@ -87,7 +100,7 @@ function ViewZones(){
                     No
                   </button>
 
-                  <button className="logout-btn confirm-btn" onClick={()=>{}}>Yes</button>
+                  <button className="logout-btn confirm-btn" onClick={handleDelete}>Yes</button>
                 </div>
               </div>
             </AppModal>

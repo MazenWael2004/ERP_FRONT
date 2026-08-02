@@ -54,6 +54,7 @@ function ViewJobs() {
   const { t } = useTranslation();
   const [selectedRows, setSelectedRows] = useState([]);
   const [opened, { open, close }] = useDisclosure(false);
+  
   useEffect(() => {
     // console.log(selectedRows, selectedRows.ids.size);
   }, []);

@@ -15,15 +15,15 @@
 
 .link[data-active] {
   background: var(--mantine-color-blue-6);
-  color: white;
+  color: var(--mantine-color-text)
 }
 
 .link[data-active] svg {
-  color: white;
+  color: var(--mantine-color-text)
 }
 
 .linkLabel {
   font-size: 14px;
   font-weight: 500;
-  color: black;
+  color: var(--mantine-color-text)
 }

@@ -18,15 +18,15 @@ export default function ActionButton({isRowSelected,onClick}) {
       </Menu.Target>
 
       <Menu.Dropdown>
-        <Menu.Item >Edit</Menu.Item>
+        <Menu.Item style={{fontFamily:"Cairo"}} >{t("EDIT")}</Menu.Item>
 
-      <Menu.Item >Enable</Menu.Item>
+      <Menu.Item style={{fontFamily:"Cairo"}} >{t("ENABLE")}</Menu.Item>
 
-       <Menu.Item >Disable</Menu.Item>
+       <Menu.Item style={{fontFamily:"Cairo"}} >{t("DISABLE")}</Menu.Item>
 
        
-          <Menu.Item color="red" onClick={onClick} >
-            Delete
+          <Menu.Item style={{fontFamily:"Cairo",color:"red"}} onClick={onClick} >
+            {t("DELETE")}
           </Menu.Item>
        
       </Menu.Dropdown>

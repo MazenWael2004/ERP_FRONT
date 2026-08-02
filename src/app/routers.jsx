@@ -9,6 +9,11 @@ import EditJob from "../features/jobs/pages/EditJob";
 import ViewZones from "../features/zones/pages/ViewZones";
 import NewZone from "../features/zones/pages/NewZone";
 import EditZone from "../features/zones/pages/EditZone";
+import ViewEmployees from "../features/employees/pages/ViewEmployees";
+import NewEmployee from "../features/employees/pages/NewEmployee";
+import EditEmployee from "../features/employees/pages/EditEmployee";
+import ViewUsers from "../features/users/pages/ViewUsers";
+import AddUser from "../features/users/pages/NewUser";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +50,26 @@ export const router = createBrowserRouter([
       {
        path:"zones/:id",
        element:<EditZone />
+      },
+      {
+       path:"/employees",
+       element: <ViewEmployees />
+      },
+      {
+       path:"employees/new-employee",
+        element:<NewEmployee />
+      },
+      {
+        path:"employees/:id",
+        element: <EditEmployee />
+      },
+      {
+        path:"/users",
+        element: <ViewUsers />
+      },
+      {
+        path:"/users/new-user",
+        element: <AddUser />
       }
     ],
   },

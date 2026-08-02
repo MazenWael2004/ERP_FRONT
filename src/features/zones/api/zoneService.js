@@ -32,3 +32,7 @@ export const checkZoneExists = async (field,value) => {
 
   return response.data;
 };
+
+export const deleteZone = async (id)=>{
+  return api.delete(`/zones/${id}`);
+};

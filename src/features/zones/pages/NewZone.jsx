@@ -52,7 +52,7 @@ function NewZone() {
     <MainLayout
       header={
         <Header
-          route="New Zone"
+          route={t("NEW_ZONE")}
           buttonText={t("SAVE")}
           buttonType="submit"
           formId="new-job-form"
